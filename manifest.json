@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "JobVibe",
+  "version": "1.0",
+  "description": "Detects visa sponsorship sentiment in job links.",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_title": "JobVibe",
+    "default_icon": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["sentiment.js", "content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "icons": {
+    "128": "icons/icon128.png"
+  }
+}
